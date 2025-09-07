@@ -1,0 +1,4 @@
+** For running this Project as Server Project Follow this steps in terminal with same folder **
+
+npm install -g netlify-cli
+netlify dev
