@@ -10,8 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="icon" type="image/png" href="ngmarslogo.png" />
+    <link rel="icon" type="image/png" href="ng.png" />
     <meta
       name="description"
       content="NGmars Systems - IT Solutions, Software Development, Cloud, AI & more"
@@ -27,7 +32,7 @@
       <nav class="navbar" aria-label="Primary">
         <a class="brand" href="#">
           <img
-            src="ngmars logo Black.png"
+            src="ngmars_logo.png"
             alt="NGmars Systems logo"
             class="brand-logo"
           />
@@ -267,6 +272,41 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Mobile full-screen overlay nav -->
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <button
+          class="nav-overlay-close"
+          id="nav-overlay-close"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+        <ul class="nav-overlay-menu">
+          <li><a class="nav-overlay-item" href="/services">Services</a></li>
+          <li><a class="nav-overlay-item" href="/portfolio">Portfolio</a></li>
+          <li><a class="nav-overlay-item" href="/about">About Us</a></li>
+          <li><a class="nav-overlay-item" href="/contact">Contact Us</a></li>
+        </ul>
+
+        <!-- Animated circles background -->
+        <div class="nav-overlay-bg">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+
       <section class="hero" id="home">
         <div class="hero-blobs" aria-hidden="true">
           <span class="blob b1"></span>
@@ -406,7 +446,64 @@
         </div>
       </div>
     </section>
+    <section class="achivements" id="home">
+      <div class="hero-blobs" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+      <div class="main-content-achivements">
+        <div class="header-text-ach">Our achivements</div>
+        <div class="box-ach">
+          <div class="individual-ach-box">
+            <p class="ach-number-text">750+</p>
+            <div class="divider"></div>
+            <p class="support-text-ach">Hours Development</p>
+          </div>
+          <div class="individual-ach-box">
+            <p class="ach-number-text">90 %</p>
+            <div class="divider"></div>
+            <p class="support-text-ach">Client Feedback</p>
+          </div>
+          <div class="individual-ach-box">
+            <p class="ach-number-text">3000+</p>
+            <div class="divider"></div>
+            <p class="support-text-ach">Views on Figma</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <footer class="footer">
+      <div class="quick-links-footer">
+        <p class="quick-link-text">Quick links</p>
+        <a href="" class="quick-links-links">Service</a
+        ><a href="" class="quick-links-links">Portfolio</a
+        ><a href="" class="quick-links-links">About us</a
+        ><a href="" class="quick-links-links">Contact us</a>
+      </div>
+      <div class="quick-links-qoute">
+        <p class="quick-link-text">Quote</p>
+        <p class="quick-links-quote">We develop brand for you.</p>
+      </div>
+      <div class="quick-links-company-info">
+        <img src="" alt="NGMARS.logo" class="company-logo" />
+        <div class="ngmars-information">
+          <div class="quick-information">
+            <span class="material-symbols-outlined">phone</span>
+            <a href="" class="quick-information-text"> +91-9898255602 </a>
+          </div>
+          <div class="quick-information">
+            <span class="material-symbols-outlined"> mail </span>
+            <a href="" class="quick-information-text"> sales@ngmars.com </a>
+          </div>
+          <div class="quick-information">
+            <span class="material-symbols-outlined"> location_on </span>
+            <a href="" class="quick-information-text"> Mehsana, Gujarat </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
