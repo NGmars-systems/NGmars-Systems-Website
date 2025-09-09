@@ -625,7 +625,7 @@
     }
   
     .contact-page {
-      padding: 20px 0 40px;
+      padding: 120px 0 40px; /* ensure space under fixed navbar on small devices */
     }
   
     .section-title {
