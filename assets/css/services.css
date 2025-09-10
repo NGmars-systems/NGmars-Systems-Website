@@ -936,6 +936,18 @@ nav {
   background-clip: text;
 }
 
+/* Centered subtle section mini-divider */
+.mini-divider {
+  width: min(320px, 50%);
+  height: 2px;
+  margin: 16px auto 28px auto;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.28), transparent);
+  opacity: .7;
+  border-radius: 999px;
+  position: relative;
+  z-index: 10;
+}
+
 .svc-cta-final p {
   margin: 0 0 20px;
   color: #6b7280;
@@ -1072,8 +1084,9 @@ nav {
   width: min(1160px, calc(100% - 48px));
   margin: 24px auto 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   padding: 18px 0 32px;
   border-top: 1px solid rgba(255,255,255,0.08);
 }

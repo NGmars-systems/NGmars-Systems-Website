@@ -1,8 +1,8 @@
 // EmailJS Configuration - REPLACE THESE WITH YOUR ACTUAL VALUES
 const EMAILJS_CONFIG = {
-    SERVICE_ID: "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-    TEMPLATE_ID: "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-    PUBLIC_KEY: "YOUR_PUBLIC_KEY", // Replace with your EmailJS public key
+    SERVICE_ID: "service_rvasv5b", // Replace with your EmailJS service ID
+    TEMPLATE_ID: "template_15zhydq", // Replace with your EmailJS template ID
+    PUBLIC_KEY: "0TEX1uXtx1dnDhgUM", // Replace with your EmailJS public key
   }
   
   // Declare emailjs variable
