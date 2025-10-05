@@ -1,0 +1,546 @@
+/* assets/css/career.css */
+
+/* Career Page Styles */
+
+/* Reset body margins and ensure full height */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Career page container with unified background */
+  .career-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .career-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(99,102,241,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(139,92,246,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(99,102,241,0.03)"/><circle cx="10" cy="60" r="0.5" fill="rgba(139,92,246,0.03)"/><circle cx="90" cy="40" r="0.5" fill="rgba(99,102,241,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Hero section full-screen with gradient blend */
+  .career-hero {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #f8fafc 100%);
+    color: white;
+    min-height: 100vh; /* Full screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 6.5rem 0 0; /* top spacing for navbar */
+    z-index: 1;
+    transform: none !important; /* keep hero static; prevents blank gap on scroll */
+  }
+  
+  .career-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    z-index: 0;
+  }
+  
+  /* Short, below-the-features blend that merges into the shared page background */
+  .hero-blend {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 96px; /* desktop/tablet length */
+    background: linear-gradient(
+      to bottom,
+      rgba(248, 250, 252, 0) 0%,
+      rgba(248, 250, 252, 0.7) 55%,
+      #f8fafc 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .career-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem 0;
+    top: -50px; /* SHIFT UP: raise hero text by 50px without changing hero height */
+  }
+  
+  .career-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+  }
+  
+  .career-hero p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1s forwards;
+  }
+  
+  .hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1.5s forwards;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .feature-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Job listings section with transparent background (matches Why Join) */
+  .job-listings {
+    background: transparent; /* remove gray block */
+    padding: 4rem 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .job-listings .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1; /* keep content above the top blend overlay */
+  }
+  
+  .job-listings h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .job-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px -5px rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+  
+  .job-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  }
+  
+  .job-card:hover {
+    box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.2);
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .job-info {
+    flex: 1;
+    min-width: 400px;
+    padding-left: 1rem;
+  }
+  
+  .job-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.8rem;
+  }
+  
+  .job-details {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    color: #64748b;
+    font-size: 0.95rem;
+  }
+  
+  .job-details span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    background: #f1f5f9;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  
+  .job-details .separator {
+    color: #cbd5e1;
+    display: none;
+  }
+  
+  .apply-button {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    min-width: 120px;
+    text-align: center;
+  }
+  
+  .apply-button:hover {
+    background: linear-gradient(135deg, #5b5cf0, #7c3aed);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  }
+  
+  /* Why join section with unified background */
+  .why-join {
+    background: transparent;
+    padding: 5rem 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .why-join .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .why-join h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .benefit-card {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  }
+  
+  .benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+  }
+  
+  .benefit-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+  }
+  
+  .benefit-card p {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+  
+  /* Moving background elements */
+  .moving-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    animation: float 20s infinite linear;
+  }
+  
+  .floating-circle:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 25s;
+  }
+  
+  .floating-circle:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 5s;
+    animation-duration: 30s;
+  }
+  
+  .floating-circle:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 10s;
+    animation-duration: 20s;
+  }
+  
+  .floating-circle:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    right: 30%;
+    animation-delay: 15s;
+    animation-duration: 35s;
+  }
+  
+  .floating-circle:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    bottom: 20%;
+    right: 10%;
+    animation-delay: 20s;
+    animation-duration: 28s;
+  }
+  
+  .floating-circle:nth-child(6) {
+    width: 90px;
+    height: 90px;
+    top: 40%;
+    left: 5%;
+    animation-delay: 8s;
+    animation-duration: 32s;
+  }
+  
+  .floating-circle:nth-child(7) {
+    width: 110px;
+    height: 110px;
+    bottom: 10%;
+    left: 50%;
+    animation-delay: 12s;
+    animation-duration: 26s;
+  }
+  
+  .floating-circle:nth-child(8) {
+    width: 50px;
+    height: 50px;
+    top: 70%;
+    right: 5%;
+    animation-delay: 18s;
+    animation-duration: 22s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+      opacity: 0.3;
+    }
+    25% {
+      transform: translateY(-20px) translateX(10px) rotate(90deg);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translateY(-40px) translateX(-10px) rotate(180deg);
+      opacity: 0.4;
+    }
+    75% {
+      transform: translateY(-20px) translateX(15px) rotate(270deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0px) translateX(0) rotate(360deg);
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .career-hero {
+      min-height: 100vh;
+      padding: 5.5rem 0 0;
+    }
+  
+    .career-hero-content {
+      padding: 0 1.5rem 0;
+      top: -20px; /* SHIFT UP (mobile): raise hero text a bit on smaller screens */
+    }
+  
+    .hero-blend {
+      height: 80px; /* EDIT (mobile): start blend lower so it doesn't cover features */
+      bottom: -30px; /* EDIT (mobile): nudge blend down slightly below the hero edge */
+    }
+  
+    .career-hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .career-hero p {
+      font-size: 1.1rem;
+    }
+  
+    .job-card {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+  
+    .job-info {
+      min-width: auto;
+      width: 100%;
+      padding-left: 0;
+    }
+  
+    .apply-button {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .job-details {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+  
+    .job-details span {
+      align-self: flex-start;
+    }
+  
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .job-listings h2,
+    .why-join h2 {
+      font-size: 2.2rem;
+    }
+  
+    .hero-features {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .feature-item {
+      justify-content: center;
+    }
+  
+    .floating-circle {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .career-hero h1 {
+      font-size: 2rem;
+    }
+  
+    .job-card {
+      padding: 1.5rem;
+    }
+  
+    .job-listings,
+    .why-join {
+      padding: 3rem 0;
+    }
+  }

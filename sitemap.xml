@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://www.ngmars.com/</loc>
     <lastmod>2025-09-05</lastmod>
@@ -9,7 +8,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Services Page -->
   <url>
     <loc>https://www.ngmars.com/services</loc>
     <lastmod>2025-09-14</lastmod>
@@ -17,7 +15,6 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- About Page -->
   <url>
     <loc>https://www.ngmars.com/about</loc>
     <lastmod>2025-09-14</lastmod>
@@ -25,7 +22,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Contact Page -->
   <url>
     <loc>https://www.ngmars.com/contact</loc>
     <lastmod>2025-09-14</lastmod>
@@ -33,7 +29,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Portfolio Page -->
   <url>
     <loc>https://www.ngmars.com/portfolio</loc>
     <lastmod>2025-10-04</lastmod>
@@ -41,7 +36,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog Main Page -->
   <url>
     <loc>https://www.ngmars.com/blog</loc>
     <lastmod>2025-10-04</lastmod>
@@ -49,7 +43,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog: Web Core Vitals -->
   <url>
     <loc>https://www.ngmars.com/blog-core-web-vitals</loc>
     <lastmod>2025-09-21</lastmod>
@@ -57,7 +50,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Blog: Flutter vs React Native -->
   <url>
     <loc>https://www.ngmars.com/blog-flutter-vs-react-native</loc>
     <lastmod>2025-09-28</lastmod>
@@ -65,7 +57,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Blog: UI/UX Dashboard Design -->
   <url>
     <loc>https://www.ngmars.com/blog-ui-ux-dashboard-design</loc>
     <lastmod>2025-10-04</lastmod>
